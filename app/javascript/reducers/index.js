@@ -3,13 +3,14 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     message: null,
-    isLoading: true,
+    isLoading: false,
     error: null,
 };
 
 export const fetchRandomMessage = createAsyncThunk('messages/fetchRandomMessage', async () => {
-    const response = await fetch('/api/v1/messages/random');
+    const response = await fetch('/api/messages/random');
     const data = await response.json();
+    console.log(data);
     return data;
 });
 

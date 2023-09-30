@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRandomMessage } from '../reducers';
 
 const Greeting = () => {
-    const [message, setMessage] = useState(null);
+  const dispatch = useDispatch();
+  const greeting = useSelector((state) => state.message); 
+  const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    const loadMessage = async () => {
-      const response = await fetch('/api/messages/random');
-      const data = await response.json();
-      console.log(data);
-      setMessage(data.content)
-    };
-    loadMessage();
-    console.log(message? message : "no message");
-  }, []);
+    dispatch(fetchRandomMessage());
+    console.log(greeting? greeting.message : "no greeting");
+  }, [dispatch]);
 
-  return (<h1>{message? message : 'hello world!'}</h1>);
+  return (
+    <div>
+      {console.log(greeting)}
+      <h1>{greeting? greeting.message : 'hello world!'}</h1>
+    </div>
+  );
 };
 
 export default Greeting;
