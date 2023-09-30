@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem "dotenv", "~> 2.8"
+
+gem "pg", "~> 1.5"

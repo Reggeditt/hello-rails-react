@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const fetchRandomMessage = createAsyncThunk('messages/fetchRandomMessage', async () => {
-    const response = await fetch('/api/messages/random');
+    const response = await fetch('/api/v1/messages/random');
     const data = await response.json();
     return data;
 });
