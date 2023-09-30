@@ -6,16 +6,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Greeting from "./components/greeting";
 import { BrowserRouter, Route, Router } from "react-router-dom";
-
+import { Provider } from "react-redux";
+import store from "./store";
 
 const App = () => {
   // add react router here
   return (
-    <BrowserRouter>
-      <Router>
-        <Route path="/" component={<Greeting />} />
-      </Router>
-    </BrowserRouter>
+    <Provider store={store}>
+      <Greeting />
+      {/* <BrowserRouter> */}
+        {/* <Router> */}
+          {/* <Route path="/" component={<Greeting />} /> */}
+        {/* </Router> */}
+      {/* </BrowserRouter> */}
+    </Provider>
   );
 }
 
