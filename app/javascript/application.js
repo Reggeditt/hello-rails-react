@@ -14,11 +14,6 @@ const App = () => {
   return (
     <Provider store={store}>
       <Greeting />
-      {/* <BrowserRouter> */}
-        {/* <Router> */}
-          {/* <Route path="/" component={<Greeting />} /> */}
-        {/* </Router> */}
-      {/* </BrowserRouter> */}
     </Provider>
   );
 }

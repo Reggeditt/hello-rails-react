@@ -146,8 +146,8 @@ You can deploy this project using:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-<!-- 
-- [ ] **[Api fetch data]** -->
+
+- [ ] **[Add a new greeting]**
 <!-- - [ ] **[new_feature_2]** -->
 <!-- - [ ] **[new_feature_3]** -->
 
